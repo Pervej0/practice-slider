@@ -56,6 +56,10 @@ const singleImage = async (event, id) => {
 
 // setSlider: to set setSingleImage as in slider-
 const setSlider = () => {
+  if (slider.length <= 1) {
+    alert("Please select more than 1 images!");
+    return;
+  }
   imagesContainer.textContent = "";
   const item = document.createElement("div");
   item.classList.add("w-75", "h-25", "mx-auto");
