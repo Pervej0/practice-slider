@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body style="background-color: rgb(235, 235, 235)">
+    <!-- name input section -->
+    <section class="container">
+      <div class="border border-secondary rounded w-50 mx-auto p-4">
+        <label class="d-flex">
+          <input
+            class="form-control py-2 border-end-0"
+            type="text"
+            placeholder="Enter name here.."
+            name="search"
+            id="search-input"
+          /><button class="btn btn-danger fw-bold py-2" onclick="loadImages()">
+            Search
+          </button>
+        </label>
+      </div>
+      <!-- slider input -->
+      <div class="my-4 rounded" id="slider-control">
+        <div class="d-flex justify-content-between align-items-center">
+          <h4 class="fw-semi-bold">Select images for slider</h4>
+          <input
+            class="py-2 px-1 w-25 border border-dark rounded"
+            type="text"
+            placeholder="Slider duration timeset.."
+            name="search"
+            id="duration-input"
+          /><button class="btn btn-danger py-2" disabled id="create-slider">
+            Create-slider
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- images showing -->
+    <section class="container">
+      <div class="row g-3 mt-4" id="images-field"></div>
+    </section>
+
+    <section></section>
+    <!-- custom js -->
+    <script src="./script.js"></script>
+  </body>
+</html>
