@@ -70,8 +70,13 @@ const setSlider = () => {
 let sliderImage;
 
 let slideStart = () => {
-  const duration = document.getElementById("duration-input").value || 1000;
   isClick = false;
+  const duration = document.getElementById("duration-input").value || 1000;
+  if (duration < 500) {
+    alert("Plese set duration time more than 500ms!");
+    imagesContainer.textContent = "";
+    return;
+  }
   sliderImage = setInterval(() => {
     if (indexNum === slider.length - 1) {
       indexNum = 0;
